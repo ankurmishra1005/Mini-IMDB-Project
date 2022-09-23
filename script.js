@@ -22,6 +22,7 @@ function handleFavBtn(e, data) {
         favMoviesInfo = [...tempData, data];
     }
 
+    console.log("fav 0", favMoviesInfo);
     localStorage.setItem("favourite movies", JSON.stringify(favMoviesInfo));
 
 
