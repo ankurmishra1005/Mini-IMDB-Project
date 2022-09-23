@@ -17,6 +17,7 @@ function handleFavBtn(e, data) {
     searchDownbar.innerHTML = "";
 
     let tempData = JSON.parse(localStorage.getItem("favourite movies"));
+    console.log("b", tempData);
    if (data && tempData) {
         console.log("bata de");
         favMoviesInfo = [...tempData, data];
