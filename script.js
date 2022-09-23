@@ -17,12 +17,14 @@ function handleFavBtn(e, data) {
     searchDownbar.innerHTML = "";
 
     let tempData = JSON.parse(localStorage.getItem("favourite movies"));
-    if (data) {
-
+   if (data && tempData) {
+        console.log("bata de");
         favMoviesInfo = [...tempData, data];
+    } else {
+        favMoviesInfo.push(data);
     }
 
-    console.log("fav 0", favMoviesInfo);
+//     console.log("fav 0", favMoviesInfo);
     localStorage.setItem("favourite movies", JSON.stringify(favMoviesInfo));
 
 
